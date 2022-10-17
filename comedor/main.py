@@ -33,7 +33,7 @@ def comida():
     info_str = row.td.next_sibling.text
 
     # Returns info for current day if exists
-    return {'value': info_str} if info_date == str_today() else {}
+    return {'value': info_str if info_date == str_today() else None}
 
 
 def init_session():
